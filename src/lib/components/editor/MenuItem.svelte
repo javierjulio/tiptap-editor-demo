@@ -1,8 +1,7 @@
 <script>
-	import remixiconUrl from 'remixicon/fonts/remixicon.symbol.svg'
+  import remixiconUrl from 'remixicon/fonts/remixicon.symbol.svg'
 
   export let icon;
-  // export let title;
   export let action;
   export let isActive;
 </script>
@@ -14,31 +13,38 @@
 </button>
 
 <style>
-	button {
-		flex: 1 1 auto;
+  button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    flex: 1 1 auto;
     overflow-x: hidden;
     overflow-y: auto;
-		align-items: center;
+    align-items: center;
     padding: 1.25rem 1rem;
     -webkit-overflow-scrolling: touch;
-		background-color: transparent;
-		border: none;
-		border-radius: 0.4rem;
-		cursor: pointer;
-		height: 1.75rem;
-		margin-right: 0.25rem;
-		padding: 0.25rem;
-		width: 1.75rem;
-	}
+    height: 1.75rem;
+    padding: 0.25rem;
+    transition: background-color 0.25s;
+    width: 1.75rem;
+  }
 
-	button > svg {
+  button > svg {
     fill: currentColor;
     height: 100%;
     width: 100%;
-	}
+  }
 
-	button.active {
-		background: #303030;
-		color: white;
-	}
+  button:hover {
+    background-color: #f3f4f6;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  button.active {
+    background-color: #e5e7eb;
+  }
 </style>

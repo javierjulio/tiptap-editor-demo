@@ -2,15 +2,14 @@
   import Tiptap from './lib/Tiptap.svelte'
 </script>
 
-<main>
-  <div class="editor">
-    <Tiptap />
-  </div>
-</main>
+<div class="editor">
+  <Tiptap />
+</div>
 
 <style>
   .editor {
-    text-align: start;
+    flex: 1 0 auto;
+    font-size: 24px;
     max-width: 750px;
     width: 100%;
   }
