@@ -2,7 +2,8 @@
   import { onMount, onDestroy } from 'svelte';
   import { Editor } from '@tiptap/core';
   import StarterKit from '@tiptap/starter-kit';
-  import MenuItem from './components/editor/MenuItem.svelte'
+  import Highlight from '@tiptap/extension-highlight';
+  import MenuItem from './components/editor/MenuItem.svelte';
 
   let element;
   let editor;
@@ -10,7 +11,7 @@
   onMount(() => {
     editor = new Editor({
       element: element,
-      extensions: [StarterKit],
+      extensions: [StarterKit, Highlight],
       content: `
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id aliquet risus feugiat in ante metus dictum at.
@@ -44,6 +45,7 @@
   <MenuItem icon="bold" action={() => editor.chain().focus().toggleBold().run()} isActive={editor.isActive('bold')}/>
   <MenuItem icon="italic" action={() => editor.chain().focus().toggleItalic().run()} isActive={editor.isActive('italic')}/>
   <MenuItem icon="strikethrough" action={() => editor.chain().focus().toggleStrike().run()} isActive={editor.isActive('strike')}/>
+  <MenuItem icon="mark-pen-line" action={() => editor.chain().focus().toggleHighlight().run()} isActive={editor.isActive('highlight')}/>
   <MenuItem icon="h-1" action={() => editor.chain().focus().toggleHeading({ level: 1 }).run()} isActive={editor.isActive('heading', { level: 1 })}/>
   <MenuItem icon="h-2" action={() => editor.chain().focus().toggleHeading({ level: 2 }).run()} isActive={editor.isActive('heading', { level: 2 })}/>
   <MenuItem icon="h-3" action={() => editor.chain().focus().toggleHeading({ level: 3 }).run()} isActive={editor.isActive('heading', { level: 3 })}/>

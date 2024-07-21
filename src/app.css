@@ -39,3 +39,9 @@ body, html {
   max-width: 1280px;
   padding: 2rem;
 }
+
+.tiptap :where(mark) {
+  background-color: #fef08a;
+  box-decoration-break: clone;
+  padding: 0.15rem 0;
+}
