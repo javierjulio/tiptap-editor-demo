@@ -30,6 +30,14 @@ svg {
   vertical-align: middle;
 }
 
+hr {
+  border-color: #e5e7eb;
+  border-top-width: 1px;
+  color: inherit;
+  height: 0;
+  margin: 2.8em 0;
+}
+
 body, html {
   height: 100%;
   margin: 0;
