@@ -61,6 +61,12 @@
 
 <div bind:this={element} />
 
+{#if editor}
+<div class="character-count">
+  {editor.storage.characterCount.characters()} characters
+</div>
+{/if}
+
 <style>
   .menu-bar {
     border: 1px solid #e5e7eb;
@@ -75,5 +81,11 @@
     max-height: 42px;
     padding: 4px;
     align-items: center;
+  }
+
+  .character-count {
+    color: #9ca3af;
+    font-size: 14px;
+    text-align: end;
   }
 </style>
