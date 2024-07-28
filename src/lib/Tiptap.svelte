@@ -4,6 +4,8 @@
   import StarterKit from '@tiptap/starter-kit';
   import Highlight from '@tiptap/extension-highlight';
   import MenuItem from './components/editor/MenuItem.svelte';
+  import TaskList from '@tiptap/extension-task-list';
+  import TaskItem from '@tiptap/extension-task-item';
 
   let element;
   let editor;
@@ -11,7 +13,7 @@
   onMount(() => {
     editor = new Editor({
       element: element,
-      extensions: [StarterKit, Highlight],
+      extensions: [StarterKit, Highlight, TaskList, TaskItem.configure({nested: true})],
       content: `
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id aliquet risus feugiat in ante metus dictum at.
