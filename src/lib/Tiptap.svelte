@@ -6,6 +6,7 @@
   import MenuItem from './components/editor/MenuItem.svelte';
   import TaskList from '@tiptap/extension-task-list';
   import TaskItem from '@tiptap/extension-task-item';
+  import CharacterCount from '@tiptap/extension-character-count';
 
   let element;
   let editor;
@@ -13,7 +14,7 @@
   onMount(() => {
     editor = new Editor({
       element: element,
-      extensions: [StarterKit, Highlight, TaskList, TaskItem.configure({nested: true})],
+      extensions: [StarterKit, Highlight, TaskList, TaskItem.configure({nested: true}), CharacterCount],
       content: `
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id aliquet risus feugiat in ante metus dictum at.
