@@ -49,6 +49,51 @@ ol {
   }
 }
 
+ul[data-type="taskList"] {
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+
+  li {
+    align-items: flex-start;
+    display: flex;
+
+    > label {
+      flex: 0 0 auto;
+      margin-right: 0.5rem;
+      margin-top: 0.1em;
+      user-select: none;
+    }
+
+    > div {
+      flex: 1 1 auto;
+    }
+  }
+
+  input[type="checkbox"] {
+    cursor: pointer;
+  }
+
+  ul[data-type="taskList"] {
+    margin: 0;
+  }
+}
+
+[type="checkbox"] {
+  height: 1rem;
+  width: 1rem;
+}
+
+[type="checkbox"]:checked {
+  background-color: currentColor;
+  background-image: url('data:image/svg+xml,%3Csvg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12"%3E%3Cpath stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M1 5.917 5.724 10.5 15 1.5"/%3E%3C/svg%3E');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0.65rem 0.65rem;
+  border-color: transparent;
+  print-color-adjust: exact;
+}
+
 body, html {
   height: 100%;
   margin: 0;
