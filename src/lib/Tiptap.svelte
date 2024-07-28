@@ -19,13 +19,17 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id aliquet risus feugiat in ante metus dictum at.
         </p>
         <p>
-          Feugiat nibh sed pulvinar proin gravida. Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Mauris commodo quis imperdiet massa tincidunt nunc.
+          Feugiat nibh sed pulvinar proin gravida.
         </p>
+        <ul data-type="taskList">
+          <li data-type="taskItem" data-checked="true">A list item</li>
+          <li data-type="taskItem" data-checked="false">And another one</li>
+        </ul>
         <p>
           Quam lacus suspendisse faucibus interdum posuere lorem. Amet aliquam id diam maecenas ultricies mi eget mauris.
         </p>
         <p>
-          Gravida rutrum quisque non tellus. Convallis posuere morbi leo urna. Quis hendrerit dolor magna eget est lorem ipsum.
+          Gravida rutrum quisque non tellus. Convallis posuere morbi leo urna.
         </p>
       `,
       onTransaction: () => {
