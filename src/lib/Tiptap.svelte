@@ -62,7 +62,7 @@
 <div bind:this={element} />
 
 {#if editor}
-<div class="character-count">
+<div class="text-gray-400 text-sm text-end py-4">
   {editor.storage.characterCount.characters()} characters
 </div>
 {/if}
@@ -81,11 +81,5 @@
     max-height: 42px;
     padding: 4px;
     align-items: center;
-  }
-
-  .character-count {
-    color: #9ca3af;
-    font-size: 14px;
-    text-align: end;
   }
 </style>
