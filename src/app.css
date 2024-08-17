@@ -43,6 +43,11 @@ body, html {
   padding: 0.15rem 0;
 }
 
+.tiptap :where(p) {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
 .tiptap :where(ul, ol) {
   margin: 1.25rem 0;
   padding-inline-start: 1.4em;
