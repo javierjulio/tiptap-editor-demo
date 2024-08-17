@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-*, :after, :before {
-  box-sizing: border-box;
-  border: 0 solid #e5e7eb
-}
-
 :root {
   background-color: #ffffff;
   color: #213547;
@@ -19,22 +14,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+body, html {
+  height: 100%;
+  margin: 0;
 }
 
-img,
-svg {
-  display: block;
-  vertical-align: middle;
+#app {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 2rem;
 }
 
-hr {
+.tiptap :where(hr) {
   border-color: #e5e7eb;
   border-top-width: 1px;
   color: inherit;
@@ -42,8 +37,13 @@ hr {
   margin: 2.8em 0;
 }
 
-ul,
-ol {
+.tiptap :where(mark) {
+  background-color: #fef08a;
+  box-decoration-break: clone;
+  padding: 0.15rem 0;
+}
+
+.tiptap :where(ul, ol) {
   margin: 1.25rem 0;
   padding-inline-start: 1.4em;
 
@@ -53,7 +53,7 @@ ol {
   }
 }
 
-ul[data-type="taskList"] {
+.tiptap :where(ul[data-type="taskList"]) {
   list-style: none;
   margin-left: 0;
   padding: 0;
@@ -76,45 +76,21 @@ ul[data-type="taskList"] {
 
   input[type="checkbox"] {
     cursor: pointer;
+    height: 1rem;
+    width: 1rem;
+  }
+
+  input[type="checkbox"]:checked {
+    background-color: currentColor;
+    background-image: url('data:image/svg+xml,%3Csvg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12"%3E%3Cpath stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M1 5.917 5.724 10.5 15 1.5"/%3E%3C/svg%3E');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0.65rem 0.65rem;
+    border-color: transparent;
+    print-color-adjust: exact;
   }
 
   ul[data-type="taskList"] {
     margin: 0;
   }
-}
-
-[type="checkbox"] {
-  height: 1rem;
-  width: 1rem;
-}
-
-[type="checkbox"]:checked {
-  background-color: currentColor;
-  background-image: url('data:image/svg+xml,%3Csvg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12"%3E%3Cpath stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M1 5.917 5.724 10.5 15 1.5"/%3E%3C/svg%3E');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 0.65rem 0.65rem;
-  border-color: transparent;
-  print-color-adjust: exact;
-}
-
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-#app {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 2rem;
-}
-
-.tiptap :where(mark) {
-  background-color: #fef08a;
-  box-decoration-break: clone;
-  padding: 0.15rem 0;
 }
