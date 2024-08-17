@@ -29,6 +29,14 @@ body, html {
   padding: 2rem;
 }
 
+.tiptap > :first-child {
+  margin-top: 0;
+}
+
+.tiptap > :last-child {
+  margin-bottom: 0;
+}
+
 .tiptap :where(hr) {
   border-color: #e5e7eb;
   border-top-width: 1px;
