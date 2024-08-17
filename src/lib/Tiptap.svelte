@@ -59,10 +59,10 @@
 </div>
 {/if}
 
-<div bind:this={element} />
+<div class="py-4" bind:this={element} />
 
 {#if editor}
-<div class="text-gray-400 text-sm text-end py-4">
+<div class="text-gray-400 text-sm text-end py-2">
   {editor.storage.characterCount.characters()} characters
 </div>
 {/if}
